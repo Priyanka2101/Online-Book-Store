@@ -1,0 +1,20 @@
+p
+{font-size:24px;color:blue;}
+body{
+background-image:url(images.jpg);
+background-repeat:no-repeat;
+}
+a:link {
+  color: red;
+}
+a:visited {
+  color: green;
+}
+a:hover {
+  color: hotpink;
+}
+a:active {
+  color: blue;
+}
+.xlink {cursor:crosshair}
+.hlink{cursor:help}

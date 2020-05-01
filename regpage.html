@@ -1,0 +1,105 @@
+<html>
+<head>
+<style type='text/css'>
+input{font-family:'Monotype Corsiva';font-size:30px;color:brown;text-align:center;}
+option,select{font-size:24px;color:blue;}</style>
+<script type='text/javascript'>
+function validate()
+{
+var n=new RegExp("^[A-Za-z]{1,45}$","g");
+var p=new RegExp( "^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,}$","g");
+var ph=new RegExp("[0-9]{10}","g");
+var mail=new RegExp("^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})$","g");
+na=document.getElementById('nid').value;
+pa=document.getElementById('pid').value;
+pho=document.getElementById('phid').value;
+ma=document.getElementById('eid').value;
+add=document.getElementById('add').value;
+if(!(na.match(n)))
+alert("invalid name");
+if(!(pa.match(p)))
+alert("invalid password");
+if(!(ma.match(mail)))
+alert("invalid mail id");
+if(!(pho.match(ph)))
+alert("invalid phone number");
+if(add=="")
+alert("invalid address");
+}
+</script>
+</head>
+<center>
+<form name='myf'>
+Name:<input type="text" name="name" id='nid'></br>
+Password:<input type="password" name="pass" id='pid'></br>
+E-mail id:<input type="text" name="email" id='eid'></br>
+Phone number:<input type="text" name="nol" id='phid'></br>
+Gender:<input type="radio" value="Male" name="submit">Male<input type="radio" value="Female" name="submit">Female</br>
+Day
+<select name='day' id='dayddl'>
+<option value='1'>1</option>
+<option value='2'>2</option>
+<option value='3'>3</option>
+<option value='4'>4</option>
+<option value='5'>5</option>
+<option value='6'>6</option>
+<option value='7'>7</option>
+<option value='8'>8</option>
+<option value='9'>9</option>
+<option value='10'>10</option>
+<option value='11'>11</option>
+<option value='12'>12</option>
+<option value='13'>13</option>
+<option value='14'>14</option>
+<option value='15'>15</option>
+<option value='16'>16</option>
+<option value='17'>17</option>
+<option value='18'>18</option>
+<option value='19'>19</option>
+<option value='20'>20</option>
+<option value='21'>21</option>
+<option value='22'>22</option>
+<option value='23'>23</option>
+<option value='24'>24</option>
+<option value='25'>25</option>
+<option value='26'>26</option>
+<option value='27'>27</option>
+<option value='28'>28</option>
+<option value='29'>29</option>
+<option value='30'>30</option>
+<option value='31'>31</option>
+</select>
+
+Month
+<select name='month' id='monthddl'>
+<option value='1'>1</option>
+<option value='2'>2</option>
+<option value='3'>3</option>
+<option value='4'>4</option>
+<option value='5'>5</option>
+<option value='6'>6</option>
+<option value='7'>7</option>
+<option value='8'>8</option>
+<option value='9'>9</option>
+<option value='10'>10</option>
+<option value='11'>11</option>
+<option value='12'>12</option>
+</select>
+
+
+Year
+
+<select name='day' id='blah'>
+<option value='1999'>1999</option>
+<option value='2000'>2000</option>
+<option value='2001'>2001</option>
+</select>
+</br>
+Languages known:<input type="checkbox"  name="eng">English<input type="checkbox"  name="hindi">Hindi
+<input type="checkbox"  name="tel">Telugu
+</br>
+Address:<input type="textarea" name="add" id='add'></br></br>
+<input type="submit" value="Submit" name="submit" onclick='validate()'></br>
+</form>
+</center>
+</html>
